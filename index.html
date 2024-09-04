@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPeditor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo"><a href="#" id="name">imageEditor</a></div>
+    </header>
+
+    <div class="container">
+        <div class="wrapper">
+            <div class="editor-panel">
+                <div class="filter">
+                    <label class="title">Filters</label>
+                    <div class="options">
+                        <button id="brightness" class="active">Brightness</button>
+                        <button id="grayscale">Grayscale</button>
+                        <button id="blur">Blur</button>
+                    </div>
+                    <div class="slider">
+                        <div class="filter-info">
+                            <p class="name">Brightness</p>
+                            <p class="value">100%</p>
+                        </div>
+                        <input type="range" value="100" min="0" max="200">
+                    </div>
+                </div>
+                <div>
+                    <label class="title">Flip Image</label>
+                    <div class="options">
+                        <button id="horizontal"><i class='bx bx-reflect-vertical'></i> Horizontal Flip</button>
+                        <button id="vertical"><i class='bx bx-reflect-horizontal'></i> Vertical Flip</button>
+                    </div>
+                    <label class="title">Resize Image</label>
+                    <div class="resize">
+                        <label>Width:</label>
+                        <input type="number" id="resize-width" placeholder="Width">
+                        <label>Height:</label>
+                        <input type="number" id="resize-height" placeholder="Height">
+                        <button id="resize-btn">Apply Resize</button>
+                    </div>
+                    <label class="title">Rotate Image</label>
+                    <div class="rotate">
+                        <label>Rotation Angle:</label>
+                        <input type="number" id="rotate-angle" placeholder="Angle">
+                        <button id="rotate-btn">Apply Rotation</button>
+                    </div>
+                </div>
+            </div>
+            <div class="preview-img">
+                <img src="image-placeholder.svg" alt="preview-img">
+            </div>
+        </div>
+        <div class="controls">
+            <button class="reset-filter">Reset Filters</button>
+            <div class="row">
+                <input type="file" class="file-input" accept="image/*" hidden>
+                <button class="choose-img">Choose Image</button>
+                <button class="save-img">Save Image</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 imageEditor. All rights reserved.</p>
+        <p>Muhammad Sufyan BSE-21223</p>
+        <p>Aqib Ali Hashmi BSE-21242</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
